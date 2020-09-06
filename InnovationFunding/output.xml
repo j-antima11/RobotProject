@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 3.2.2 (Python 3.8.5 on win32)" generated="20200904 11:56:19.493" rpa="false">
+<robot generator="Robot 3.2.2 (Python 3.8.5 on win32)" generated="20200906 22:15:47.052" rpa="false">
 <suite id="s1" name="InnovationFunding" source="C:\Users\janti\git\RobotProject\InnovationFunding">
 <suite id="s1-s1" name="TestCases" source="C:\Users\janti\git\RobotProject\InnovationFunding\TestCases">
-<suite id="s1-s1-s1" name="Login" source="C:\Users\janti\git\RobotProject\InnovationFunding\TestCases\login.robot">
+<suite id="s1-s1-s1" name="loginWithExternalData" source="C:\Users\janti\git\RobotProject\InnovationFunding\TestCases\loginWithExternalData.robot">
 <kw name="Open a browser" library="Login_resources" type="setup">
 <kw name="Open Browser" library="SeleniumLibrary">
 <doc>Opens a new browser instance to the optional ``url``.</doc>
@@ -10,17 +10,17 @@
 <arg>${url}</arg>
 <arg>${browser}</arg>
 </arguments>
-<msg timestamp="20200904 11:56:19.913" level="INFO">Opening browser 'Chrome' to base url 'https://apply-for-innovation-funding.service.gov.uk/'.</msg>
-<status status="PASS" starttime="20200904 11:56:19.913" endtime="20200904 11:56:25.009"></status>
+<msg timestamp="20200906 22:15:51.251" level="INFO">Opening browser 'Chrome' to base url 'https://apply-for-innovation-funding.service.gov.uk/'.</msg>
+<status status="PASS" starttime="20200906 22:15:51.250" endtime="20200906 22:15:55.470"></status>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20200904 11:56:25.009" endtime="20200904 11:56:27.162"></status>
+<status status="PASS" starttime="20200906 22:15:55.471" endtime="20200906 22:15:57.618"></status>
 </kw>
-<status status="PASS" starttime="20200904 11:56:19.912" endtime="20200904 11:56:27.163"></status>
+<status status="PASS" starttime="20200906 22:15:51.248" endtime="20200906 22:15:57.618"></status>
 </kw>
-<test id="s1-s1-s1-t1" name="Incorrect email_id and password">
-<kw name="Login">
+<test id="s1-s1-s1-t1" name="Login Test">
+<kw name="LoginTest">
 <arguments>
 <arg>testaccount@gmail.com</arg>
 <arg>test1234</arg>
@@ -35,10 +35,10 @@
 <arg>id=username</arg>
 <arg>${email_id}</arg>
 </arguments>
-<msg timestamp="20200904 11:56:27.166" level="INFO">Typing text 'testaccount@gmail.com' into text field 'id=username'.</msg>
-<status status="PASS" starttime="20200904 11:56:27.166" endtime="20200904 11:56:27.264"></status>
+<msg timestamp="20200906 22:15:57.621" level="INFO">Typing text 'testaccount@gmail.com' into text field 'id=username'.</msg>
+<status status="PASS" starttime="20200906 22:15:57.620" endtime="20200906 22:15:57.715"></status>
 </kw>
-<status status="PASS" starttime="20200904 11:56:27.165" endtime="20200904 11:56:27.264"></status>
+<status status="PASS" starttime="20200906 22:15:57.620" endtime="20200906 22:15:57.716"></status>
 </kw>
 <kw name="Enter Password" library="Login_resources">
 <arguments>
@@ -50,12 +50,12 @@
 <arg>id=password</arg>
 <arg>${password}</arg>
 </arguments>
-<msg timestamp="20200904 11:56:27.265" level="INFO">Typing password into text field 'id=password'.</msg>
-<msg timestamp="20200904 11:56:27.301" level="INFO">Temporally setting log level to: NONE</msg>
-<msg timestamp="20200904 11:56:27.346" level="INFO">Log level changed from NONE to INFO.</msg>
-<status status="PASS" starttime="20200904 11:56:27.265" endtime="20200904 11:56:27.346"></status>
+<msg timestamp="20200906 22:15:57.717" level="INFO">Typing password into text field 'id=password'.</msg>
+<msg timestamp="20200906 22:15:57.753" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20200906 22:15:57.795" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20200906 22:15:57.716" endtime="20200906 22:15:57.796"></status>
 </kw>
-<status status="PASS" starttime="20200904 11:56:27.264" endtime="20200904 11:56:27.346"></status>
+<status status="PASS" starttime="20200906 22:15:57.716" endtime="20200906 22:15:57.796"></status>
 </kw>
 <kw name="Click Sign In" library="Login_resources">
 <kw name="Click Button" library="SeleniumLibrary">
@@ -63,28 +63,146 @@
 <arguments>
 <arg>id=sign-in-cta</arg>
 </arguments>
-<msg timestamp="20200904 11:56:27.347" level="INFO">Clicking button 'id=sign-in-cta'.</msg>
-<status status="PASS" starttime="20200904 11:56:27.347" endtime="20200904 11:56:27.749"></status>
+<msg timestamp="20200906 22:15:57.798" level="INFO">Clicking button 'id=sign-in-cta'.</msg>
+<status status="PASS" starttime="20200906 22:15:57.798" endtime="20200906 22:15:58.175"></status>
 </kw>
-<status status="PASS" starttime="20200904 11:56:27.346" endtime="20200904 11:56:27.750"></status>
+<status status="PASS" starttime="20200906 22:15:57.797" endtime="20200906 22:15:58.175"></status>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>2</arg>
 </arguments>
-<msg timestamp="20200904 11:56:29.751" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20200904 11:56:27.750" endtime="20200904 11:56:29.752"></status>
+<msg timestamp="20200906 22:16:00.177" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200906 22:15:58.176" endtime="20200906 22:16:00.177"></status>
 </kw>
-<status status="PASS" starttime="20200904 11:56:27.164" endtime="20200904 11:56:29.753"></status>
+<status status="PASS" starttime="20200906 22:15:57.619" endtime="20200906 22:16:00.178"></status>
 </kw>
-<status status="PASS" starttime="20200904 11:56:27.163" endtime="20200904 11:56:29.754" critical="yes"></status>
+<status status="PASS" starttime="20200906 22:15:57.618" endtime="20200906 22:16:00.179" critical="yes"></status>
 </test>
-<test id="s1-s1-s1-t2" name="Incorrect email_id and empty password">
-<kw name="Login">
+<test id="s1-s1-s1-t2" name="Login Test">
+<kw name="LoginTest">
+<arguments>
+</arguments>
+<kw name="Enter Email Address" library="Login_resources">
+<arguments>
+<arg>${email_id}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=username</arg>
+<arg>${email_id}</arg>
+</arguments>
+<msg timestamp="20200906 22:16:00.185" level="INFO">Typing text '' into text field 'id=username'.</msg>
+<status status="PASS" starttime="20200906 22:16:00.184" endtime="20200906 22:16:00.325"></status>
+</kw>
+<status status="PASS" starttime="20200906 22:16:00.183" endtime="20200906 22:16:00.326"></status>
+</kw>
+<kw name="Enter Password" library="Login_resources">
+<arguments>
+<arg>${password}</arg>
+</arguments>
+<kw name="Input Password" library="SeleniumLibrary">
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=password</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20200906 22:16:00.328" level="INFO">Typing password into text field 'id=password'.</msg>
+<msg timestamp="20200906 22:16:00.361" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20200906 22:16:00.391" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20200906 22:16:00.328" endtime="20200906 22:16:00.392"></status>
+</kw>
+<status status="PASS" starttime="20200906 22:16:00.326" endtime="20200906 22:16:00.392"></status>
+</kw>
+<kw name="Click Sign In" library="Login_resources">
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>id=sign-in-cta</arg>
+</arguments>
+<msg timestamp="20200906 22:16:00.393" level="INFO">Clicking button 'id=sign-in-cta'.</msg>
+<status status="PASS" starttime="20200906 22:16:00.393" endtime="20200906 22:16:00.617"></status>
+</kw>
+<status status="PASS" starttime="20200906 22:16:00.392" endtime="20200906 22:16:00.617"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20200906 22:16:02.619" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200906 22:16:00.617" endtime="20200906 22:16:02.620"></status>
+</kw>
+<status status="PASS" starttime="20200906 22:16:00.182" endtime="20200906 22:16:02.621"></status>
+</kw>
+<status status="PASS" starttime="20200906 22:16:00.180" endtime="20200906 22:16:02.622" critical="yes"></status>
+</test>
+<test id="s1-s1-s1-t3" name="Login Test">
+<kw name="LoginTest">
+<arguments>
+<arg>test1234</arg>
+</arguments>
+<kw name="Enter Email Address" library="Login_resources">
+<arguments>
+<arg>${email_id}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=username</arg>
+<arg>${email_id}</arg>
+</arguments>
+<msg timestamp="20200906 22:16:02.633" level="INFO">Typing text '' into text field 'id=username'.</msg>
+<status status="PASS" starttime="20200906 22:16:02.632" endtime="20200906 22:16:02.718"></status>
+</kw>
+<status status="PASS" starttime="20200906 22:16:02.630" endtime="20200906 22:16:02.719"></status>
+</kw>
+<kw name="Enter Password" library="Login_resources">
+<arguments>
+<arg>${password}</arg>
+</arguments>
+<kw name="Input Password" library="SeleniumLibrary">
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=password</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20200906 22:16:02.720" level="INFO">Typing password into text field 'id=password'.</msg>
+<msg timestamp="20200906 22:16:02.751" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20200906 22:16:02.789" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20200906 22:16:02.720" endtime="20200906 22:16:02.789"></status>
+</kw>
+<status status="PASS" starttime="20200906 22:16:02.719" endtime="20200906 22:16:02.790"></status>
+</kw>
+<kw name="Click Sign In" library="Login_resources">
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>id=sign-in-cta</arg>
+</arguments>
+<msg timestamp="20200906 22:16:02.791" level="INFO">Clicking button 'id=sign-in-cta'.</msg>
+<status status="PASS" starttime="20200906 22:16:02.790" endtime="20200906 22:16:02.964"></status>
+</kw>
+<status status="PASS" starttime="20200906 22:16:02.790" endtime="20200906 22:16:02.964"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20200906 22:16:04.967" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200906 22:16:02.965" endtime="20200906 22:16:04.967"></status>
+</kw>
+<status status="PASS" starttime="20200906 22:16:02.627" endtime="20200906 22:16:04.968"></status>
+</kw>
+<status status="PASS" starttime="20200906 22:16:02.625" endtime="20200906 22:16:04.969" critical="yes"></status>
+</test>
+<test id="s1-s1-s1-t4" name="Login Test">
+<kw name="LoginTest">
 <arguments>
 <arg>aba@yahoo.com</arg>
-<arg>${EMPTY}</arg>
 </arguments>
 <kw name="Enter Email Address" library="Login_resources">
 <arguments>
@@ -96,71 +214,10 @@
 <arg>id=username</arg>
 <arg>${email_id}</arg>
 </arguments>
-<msg timestamp="20200904 11:56:29.767" level="INFO">Typing text 'aba@yahoo.com' into text field 'id=username'.</msg>
-<status status="PASS" starttime="20200904 11:56:29.765" endtime="20200904 11:56:29.972"></status>
+<msg timestamp="20200906 22:16:04.975" level="INFO">Typing text 'aba@yahoo.com' into text field 'id=username'.</msg>
+<status status="PASS" starttime="20200906 22:16:04.974" endtime="20200906 22:16:05.076"></status>
 </kw>
-<status status="PASS" starttime="20200904 11:56:29.763" endtime="20200904 11:56:29.973"></status>
-</kw>
-<kw name="Enter Password" library="Login_resources">
-<arguments>
-<arg>${password}</arg>
-</arguments>
-<kw name="Input Password" library="SeleniumLibrary">
-<doc>Types the given password into the text field identified by ``locator``.</doc>
-<arguments>
-<arg>id=password</arg>
-<arg>${password}</arg>
-</arguments>
-<msg timestamp="20200904 11:56:29.974" level="INFO">Typing password into text field 'id=password'.</msg>
-<msg timestamp="20200904 11:56:30.032" level="INFO">Temporally setting log level to: NONE</msg>
-<msg timestamp="20200904 11:56:30.096" level="INFO">Log level changed from NONE to INFO.</msg>
-<status status="PASS" starttime="20200904 11:56:29.973" endtime="20200904 11:56:30.096"></status>
-</kw>
-<status status="PASS" starttime="20200904 11:56:29.973" endtime="20200904 11:56:30.097"></status>
-</kw>
-<kw name="Click Sign In" library="Login_resources">
-<kw name="Click Button" library="SeleniumLibrary">
-<doc>Clicks the button identified by ``locator``.</doc>
-<arguments>
-<arg>id=sign-in-cta</arg>
-</arguments>
-<msg timestamp="20200904 11:56:30.098" level="INFO">Clicking button 'id=sign-in-cta'.</msg>
-<status status="PASS" starttime="20200904 11:56:30.098" endtime="20200904 11:56:30.190"></status>
-</kw>
-<status status="PASS" starttime="20200904 11:56:30.097" endtime="20200904 11:56:30.190"></status>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<doc>Pauses the test executed for the given time.</doc>
-<arguments>
-<arg>2</arg>
-</arguments>
-<msg timestamp="20200904 11:56:32.193" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20200904 11:56:30.191" endtime="20200904 11:56:32.193"></status>
-</kw>
-<status status="PASS" starttime="20200904 11:56:29.760" endtime="20200904 11:56:32.194"></status>
-</kw>
-<status status="PASS" starttime="20200904 11:56:29.757" endtime="20200904 11:56:32.194" critical="yes"></status>
-</test>
-<test id="s1-s1-s1-t3" name="Empty email_id and wrong password">
-<kw name="Login">
-<arguments>
-<arg>${EMPTY}</arg>
-<arg>abc123</arg>
-</arguments>
-<kw name="Enter Email Address" library="Login_resources">
-<arguments>
-<arg>${email_id}</arg>
-</arguments>
-<kw name="Input Text" library="SeleniumLibrary">
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<arguments>
-<arg>id=username</arg>
-<arg>${email_id}</arg>
-</arguments>
-<msg timestamp="20200904 11:56:32.199" level="INFO">Typing text '' into text field 'id=username'.</msg>
-<status status="PASS" starttime="20200904 11:56:32.199" endtime="20200904 11:56:32.255"></status>
-</kw>
-<status status="PASS" starttime="20200904 11:56:32.198" endtime="20200904 11:56:32.256"></status>
+<status status="PASS" starttime="20200906 22:16:04.973" endtime="20200906 22:16:05.076"></status>
 </kw>
 <kw name="Enter Password" library="Login_resources">
 <arguments>
@@ -172,73 +229,12 @@
 <arg>id=password</arg>
 <arg>${password}</arg>
 </arguments>
-<msg timestamp="20200904 11:56:32.258" level="INFO">Typing password into text field 'id=password'.</msg>
-<msg timestamp="20200904 11:56:32.284" level="INFO">Temporally setting log level to: NONE</msg>
-<msg timestamp="20200904 11:56:32.315" level="INFO">Log level changed from NONE to INFO.</msg>
-<status status="PASS" starttime="20200904 11:56:32.257" endtime="20200904 11:56:32.316"></status>
+<msg timestamp="20200906 22:16:05.077" level="INFO">Typing password into text field 'id=password'.</msg>
+<msg timestamp="20200906 22:16:05.113" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20200906 22:16:05.147" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20200906 22:16:05.077" endtime="20200906 22:16:05.147"></status>
 </kw>
-<status status="PASS" starttime="20200904 11:56:32.256" endtime="20200904 11:56:32.317"></status>
-</kw>
-<kw name="Click Sign In" library="Login_resources">
-<kw name="Click Button" library="SeleniumLibrary">
-<doc>Clicks the button identified by ``locator``.</doc>
-<arguments>
-<arg>id=sign-in-cta</arg>
-</arguments>
-<msg timestamp="20200904 11:56:32.318" level="INFO">Clicking button 'id=sign-in-cta'.</msg>
-<status status="PASS" starttime="20200904 11:56:32.317" endtime="20200904 11:56:32.361"></status>
-</kw>
-<status status="PASS" starttime="20200904 11:56:32.317" endtime="20200904 11:56:32.361"></status>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<doc>Pauses the test executed for the given time.</doc>
-<arguments>
-<arg>2</arg>
-</arguments>
-<msg timestamp="20200904 11:56:34.363" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20200904 11:56:32.362" endtime="20200904 11:56:34.363"></status>
-</kw>
-<status status="PASS" starttime="20200904 11:56:32.196" endtime="20200904 11:56:34.363"></status>
-</kw>
-<status status="PASS" starttime="20200904 11:56:32.196" endtime="20200904 11:56:34.363" critical="yes"></status>
-</test>
-<test id="s1-s1-s1-t4" name="Empty email_id and password">
-<kw name="Login">
-<arguments>
-<arg>${EMPTY}</arg>
-<arg>${EMPTY}</arg>
-</arguments>
-<kw name="Enter Email Address" library="Login_resources">
-<arguments>
-<arg>${email_id}</arg>
-</arguments>
-<kw name="Input Text" library="SeleniumLibrary">
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<arguments>
-<arg>id=username</arg>
-<arg>${email_id}</arg>
-</arguments>
-<msg timestamp="20200904 11:56:34.366" level="INFO">Typing text '' into text field 'id=username'.</msg>
-<status status="PASS" starttime="20200904 11:56:34.366" endtime="20200904 11:56:34.434"></status>
-</kw>
-<status status="PASS" starttime="20200904 11:56:34.365" endtime="20200904 11:56:34.435"></status>
-</kw>
-<kw name="Enter Password" library="Login_resources">
-<arguments>
-<arg>${password}</arg>
-</arguments>
-<kw name="Input Password" library="SeleniumLibrary">
-<doc>Types the given password into the text field identified by ``locator``.</doc>
-<arguments>
-<arg>id=password</arg>
-<arg>${password}</arg>
-</arguments>
-<msg timestamp="20200904 11:56:34.436" level="INFO">Typing password into text field 'id=password'.</msg>
-<msg timestamp="20200904 11:56:34.484" level="INFO">Temporally setting log level to: NONE</msg>
-<msg timestamp="20200904 11:56:34.516" level="INFO">Log level changed from NONE to INFO.</msg>
-<status status="PASS" starttime="20200904 11:56:34.436" endtime="20200904 11:56:34.517"></status>
-</kw>
-<status status="PASS" starttime="20200904 11:56:34.435" endtime="20200904 11:56:34.518"></status>
+<status status="PASS" starttime="20200906 22:16:05.076" endtime="20200906 22:16:05.148"></status>
 </kw>
 <kw name="Click Sign In" library="Login_resources">
 <kw name="Click Button" library="SeleniumLibrary">
@@ -246,35 +242,35 @@
 <arguments>
 <arg>id=sign-in-cta</arg>
 </arguments>
-<msg timestamp="20200904 11:56:34.518" level="INFO">Clicking button 'id=sign-in-cta'.</msg>
-<status status="PASS" starttime="20200904 11:56:34.518" endtime="20200904 11:56:34.812"></status>
+<msg timestamp="20200906 22:16:05.149" level="INFO">Clicking button 'id=sign-in-cta'.</msg>
+<status status="PASS" starttime="20200906 22:16:05.148" endtime="20200906 22:16:05.200"></status>
 </kw>
-<status status="PASS" starttime="20200904 11:56:34.518" endtime="20200904 11:56:34.813"></status>
+<status status="PASS" starttime="20200906 22:16:05.148" endtime="20200906 22:16:05.201"></status>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>2</arg>
 </arguments>
-<msg timestamp="20200904 11:56:36.815" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20200904 11:56:34.813" endtime="20200904 11:56:36.815"></status>
+<msg timestamp="20200906 22:16:07.202" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200906 22:16:05.201" endtime="20200906 22:16:07.203"></status>
 </kw>
-<status status="PASS" starttime="20200904 11:56:34.365" endtime="20200904 11:56:36.815"></status>
+<status status="PASS" starttime="20200906 22:16:04.972" endtime="20200906 22:16:07.205"></status>
 </kw>
-<status status="PASS" starttime="20200904 11:56:34.364" endtime="20200904 11:56:36.816" critical="yes"></status>
+<status status="PASS" starttime="20200906 22:16:04.970" endtime="20200906 22:16:07.206" critical="yes"></status>
 </test>
 <kw name="Close browsers" library="Login_resources" type="teardown">
 <kw name="Close All Browsers" library="SeleniumLibrary">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" starttime="20200904 11:56:36.818" endtime="20200904 11:56:38.929"></status>
+<status status="PASS" starttime="20200906 22:16:07.214" endtime="20200906 22:16:09.356"></status>
 </kw>
-<status status="PASS" starttime="20200904 11:56:36.817" endtime="20200904 11:56:38.930"></status>
+<status status="PASS" starttime="20200906 22:16:07.212" endtime="20200906 22:16:09.357"></status>
 </kw>
-<status status="PASS" starttime="20200904 11:56:19.577" endtime="20200904 11:56:38.931"></status>
+<status status="PASS" starttime="20200906 22:15:47.148" endtime="20200906 22:16:09.358"></status>
 </suite>
-<status status="PASS" starttime="20200904 11:56:19.574" endtime="20200904 11:56:38.949"></status>
+<status status="PASS" starttime="20200906 22:15:47.144" endtime="20200906 22:16:09.377"></status>
 </suite>
-<status status="PASS" starttime="20200904 11:56:19.550" endtime="20200904 11:56:38.963"></status>
+<status status="PASS" starttime="20200906 22:15:47.116" endtime="20200906 22:16:09.388"></status>
 </suite>
 <statistics>
 <total>
@@ -286,9 +282,12 @@
 <suite>
 <stat pass="4" fail="0" id="s1" name="InnovationFunding">InnovationFunding</stat>
 <stat pass="4" fail="0" id="s1-s1" name="TestCases">InnovationFunding.TestCases</stat>
-<stat pass="4" fail="0" id="s1-s1-s1" name="Login">InnovationFunding.TestCases.Login</stat>
+<stat pass="4" fail="0" id="s1-s1-s1" name="loginWithExternalData">InnovationFunding.TestCases.loginWithExternalData</stat>
 </suite>
 </statistics>
 <errors>
+<msg timestamp="20200906 22:16:00.180" level="WARN">Multiple test cases with name 'Login Test' executed in test suite 'InnovationFunding.TestCases.loginWithExternalData'.</msg>
+<msg timestamp="20200906 22:16:02.624" level="WARN">Multiple test cases with name 'Login Test' executed in test suite 'InnovationFunding.TestCases.loginWithExternalData'.</msg>
+<msg timestamp="20200906 22:16:04.970" level="WARN">Multiple test cases with name 'Login Test' executed in test suite 'InnovationFunding.TestCases.loginWithExternalData'.</msg>
 </errors>
 </robot>
